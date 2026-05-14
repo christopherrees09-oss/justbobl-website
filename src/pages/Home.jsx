@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Play, MapPin, Zap } from 'lucide-react';
 import TwitchIcon from '../components/TwitchIcon';
 
@@ -114,14 +115,14 @@ export default function Home() {
               <TwitchIcon size={18} />
               Watch on Twitch
             </a>
-            <a
-              href="/clips"
+            <Link
+              to="/clips"
               className="flex items-center gap-2.5 bg-transparent border border-[#c0392b]/40 hover:border-[#c0392b] text-gray-300 hover:text-white font-bold px-8 py-4 rounded text-sm tracking-widest uppercase transition-all duration-200"
               style={{ fontFamily: 'Rajdhani, sans-serif', letterSpacing: '0.12em' }}
             >
               <Play size={16} />
               View Clips
-            </a>
+            </Link>
           </div>
 
           {/* Stats bar */}
@@ -186,13 +187,13 @@ export default function Home() {
             <p className="text-gray-400 leading-relaxed mb-8">
               Expect tactical comms, ranked grind sessions, and the occasional survival game detour into Subnautica or The Forest. Always honest, always trying to improve.
             </p>
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="inline-flex items-center gap-2 text-[#c0392b] font-bold tracking-widest uppercase text-sm hover:gap-3 transition-all"
               style={{ fontFamily: 'Rajdhani, sans-serif' }}
             >
               Full Story →
-            </a>
+            </Link>
           </div>
 
           {/* Card grid */}
@@ -229,13 +230,13 @@ export default function Home() {
                   Latest Clips
                 </h2>
               </div>
-              <a
-                href="/clips"
+              <Link
+                to="/clips"
                 className="text-gray-400 hover:text-[#c0392b] text-sm font-bold tracking-widest uppercase transition-colors"
                 style={{ fontFamily: 'Rajdhani, sans-serif' }}
               >
                 View All →
-              </a>
+              </Link>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
