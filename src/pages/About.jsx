@@ -52,10 +52,10 @@ const GAMES = [
     color: '#2980b9',
   },
   {
-    name: 'Stranded Deep',
-    role: 'Island Survival',
-    description: 'Crash-landed in the Pacific, building from nothing. Craft, survive, and eventually escape the island.',
-    tags: ['Crafting', 'Survival', 'Open World'],
+    name: 'Rocket League',
+    role: 'Car Soccer',
+    description: 'Rocket-powered cars meet football in this high-octane competitive game. Easy to learn, impossible to master.',
+    tags: ['Competitive', 'Sports', 'Multiplayer'],
     color: '#d35400',
   },
 ];
