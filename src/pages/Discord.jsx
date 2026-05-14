@@ -110,7 +110,7 @@ export default function Discord() {
               <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#5865f2]/5 to-transparent pointer-events-none" />
 
               <div className="relative p-8 sm:p-12">
-                <div className="flex flex-col md:flex-row gap-10 items-start">
+                <div className="flex flex-col lg:flex-row gap-10 items-start">
                   {/* Left: info */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-6">
@@ -145,7 +145,7 @@ export default function Discord() {
                     </div>
 
                     <a
-                      href="https://discord.gg/justbobl"
+                      href="https://discord.gg/jhbFzMpdeH"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-[#5865f2] hover:bg-[#4752c4] text-white font-bold px-8 py-4 rounded-lg text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105"
@@ -157,35 +157,61 @@ export default function Discord() {
                     </a>
                   </div>
 
-                  {/* Right: channels preview */}
-                  <div className="md:w-64 w-full flex-shrink-0">
-                    <div className="bg-[#0d0d0d] border border-[#1a1a1a] rounded-xl overflow-hidden">
-                      {/* Server header mock */}
-                      <div className="bg-[#c0392b]/10 border-b border-[#1a1a1a] px-4 py-3 flex items-center gap-2">
-                        <div className="w-6 h-6 bg-[#c0392b] rounded flex items-center justify-center">
-                          <span className="text-white text-xs font-bold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>JB</span>
-                        </div>
-                        <span className="text-white text-sm font-bold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>justbobl</span>
+                  {/* Right: Discord invite widget */}
+                  <div className="lg:w-72 w-full flex-shrink-0">
+                    {/* Invite widget card */}
+                    <div className="bg-[#1e1f22] border border-[#2a2b2e] rounded-2xl overflow-hidden shadow-2xl">
+                      {/* Banner */}
+                      <div className="h-16 bg-gradient-to-r from-[#c0392b] to-[#5865f2] relative">
+                        <div className="absolute inset-0 bg-black/20" />
                       </div>
 
-                      {/* Channels list */}
-                      <div className="p-3 space-y-0.5">
-                        <p className="text-gray-600 text-[10px] font-bold tracking-widest uppercase px-2 py-1 mb-1" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                          Text Channels
-                        </p>
-                        {CHANNELS.map(ch => (
-                          <div
-                            key={ch.name}
-                            className="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-white/5 cursor-default group"
-                          >
-                            <span className="text-gray-500 text-sm group-hover:text-gray-300 transition-colors font-mono text-xs truncate">
-                              {ch.name}
-                            </span>
+                      {/* Server icon + name */}
+                      <div className="px-5 pb-5">
+                        <div className="flex items-end gap-3 -mt-8 mb-4">
+                          <div className="w-16 h-16 bg-[#111111] border-4 border-[#1e1f22] rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-xl font-bold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>JB</span>
                           </div>
-                        ))}
+                        </div>
+                        <p className="text-white font-bold text-lg leading-tight mb-1" style={{ fontFamily: 'Rajdhani, sans-serif' }}>justbobl</p>
+                        <p className="text-gray-400 text-xs mb-4">Rainbow Six Siege Community</p>
+
+                        {/* Online indicator */}
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" />
+                            <span className="text-gray-400 text-xs">Online now</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2.5 h-2.5 rounded-full bg-gray-600 inline-block" />
+                            <span className="text-gray-500 text-xs">Members</span>
+                          </div>
+                        </div>
+
+                        {/* Channels preview */}
+                        <div className="bg-[#2b2d31] rounded-lg p-3 mb-4 space-y-1">
+                          {CHANNELS.slice(0, 4).map(ch => (
+                            <div key={ch.name} className="flex items-center gap-2 py-0.5">
+                              <span className="text-gray-500 text-xs font-mono truncate">{ch.name}</span>
+                            </div>
+                          ))}
+                          <p className="text-gray-600 text-[10px] pt-1">+ more channels</p>
+                        </div>
+
+                        {/* Join button */}
+                        <a
+                          href="https://discord.gg/jhbFzMpdeH"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 w-full bg-[#5865f2] hover:bg-[#4752c4] text-white font-bold py-2.5 rounded-lg text-sm transition-all duration-200 hover:scale-[1.02]"
+                          style={{ fontFamily: 'Rajdhani, sans-serif', letterSpacing: '0.05em' }}
+                        >
+                          <DiscordIcon size={16} />
+                          Join Server
+                        </a>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-xs text-center mt-3">Preview — click to join</p>
+                    <p className="text-gray-600 text-xs text-center mt-3">discord.gg/jhbFzMpdeH</p>
                   </div>
                 </div>
               </div>
@@ -220,7 +246,7 @@ export default function Discord() {
               It's free. No commitment. Just good people talking games and watching live R6 Siege. Come see what the hype's about.
             </p>
             <a
-              href="https://discord.gg/justbobl"
+              href="https://discord.gg/jhbFzMpdeH"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#5865f2] hover:bg-[#4752c4] text-white font-bold px-10 py-5 rounded-lg text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105"
