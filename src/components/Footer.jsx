@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import TwitchIcon from './TwitchIcon';
 
 const DiscordIcon = () => (
@@ -36,14 +37,20 @@ export default function Footer() {
                 Navigate
               </p>
               <div className="flex flex-col gap-2">
-                {['Home', 'About', 'Schedule', 'Clips', 'Discord'].map(link => (
-                  <a
-                    key={link}
-                    href={`/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`}
+                {[
+                  { label: 'Home', to: '/' },
+                  { label: 'About', to: '/about' },
+                  { label: 'Schedule', to: '/schedule' },
+                  { label: 'Clips', to: '/clips' },
+                  { label: 'Discord', to: '/discord' },
+                ].map(({ label, to }) => (
+                  <Link
+                    key={to}
+                    to={to}
                     className="text-gray-400 hover:text-white text-sm transition-colors"
                   >
-                    {link}
-                  </a>
+                    {label}
+                  </Link>
                 ))}
               </div>
             </div>
