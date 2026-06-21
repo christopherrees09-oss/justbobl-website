@@ -145,7 +145,7 @@ export default function Discord() {
                     </div>
 
                     <a
-                      href="https://discord.gg/jhbFzMpdeH"
+                      href="https://discord.gg/jZzdd4y5wn"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-[#5865f2] hover:bg-[#4752c4] text-white font-bold px-8 py-4 rounded-lg text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105"
